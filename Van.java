@@ -22,7 +22,9 @@ public class Van extends GroundTransportation {
 
     @Override
     public String toString() {
-        return super.toString() +
-                String.format("%15s: %d\n", "Nº de Pacotes", packages);
-    }
+        StringBuilder sb = new StringBuilder(super.toString());
+        sb.append(String.format("%15s: %d\n", "Nº de Pacotes", packages));
+        return sb.toString();
+}
+
 }
